@@ -32,3 +32,8 @@ services:
       - db
     env_file:
       - .env
+volumes:
+  db-data:
+    driver: local
+  redis-data:
+    driver: local
