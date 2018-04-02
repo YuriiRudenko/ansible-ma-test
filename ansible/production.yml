@@ -1,0 +1,8 @@
+---
+- name: ansistrano deploy
+  hosts: production
+  vars_files:
+    - production.connection.yml
+    - production.ansible.yml
+  roles:
+    - { role: carlosbuenosvinos.ansistrano-deploy }

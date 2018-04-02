@@ -1,0 +1,10 @@
+- name: prepare env_file
+  become: true
+  become_user: app
+  shell: bash -l -c "cp /home/app/.env /home/app/ma/current/.env"
+- name: start containers with changes
+  become: true
+  become_user: app
+  shell: bash -l -c "cd /home/app/ma/current/ansible && bash production.sh"
+  register: ps
+- debug: msg={{ ps.stdout }}
