@@ -1,2 +1,1 @@
-[production]
-3.14.65.254:22
+production ansible_user=app ansible_port=8888 ansible_host=68.183.209.163 ansible_ssh_private_key_file=/Users/v/.ssh/ma
